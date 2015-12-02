@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>CursoRails</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= render :partial => "layouts/menu" %>
+
+  <div class="row">
+    <div class="col s12 m3 l2">
+      <div class="card-panel blue-grey lighten-3">
+        <ul>
+          <li>uno</li>
+          <li>dos</li>
+          <li>tres</li>
+        </ul>
+      </div>
+      
+    </div>
+    <div class="col s12 m9 l10">
+      <div class="card-panel blue-grey lighten-5">
+        <% if hay_banner? %>
+        <%= yield :imagen %>
+        <%= yield %>
+        <% else %>
+        <%= yield %>
+        <% end %>
+      </div>
+      
+    </div>
+  </div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Carrito de Compas</a>
+      <a href="" data-activates="mobile-demo" class="button-collapse"><i class="fa fa-bars"></i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><%= link_to_unless_current("Inicio", :action=> "index") %></li>
+        <li><%= link_to_unless_current("Localizacion", :action=> "localizacion") %></li>
+        <li><%= link_to_unless_current("Servicios", :action=> "servicios") %></li>
+        <li><%= link_to_unless_current("Quienes Somos", :action=> "quienes_somos") %></li>
+        <li><%= link_to_unless_current("Contacto", :action=> "contacto") %></li>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li><%= link_to_unless_current("Inicioo",:controller=>"home", :action=> "index") %></li>
+        <li><%= link_to_unless_current("Localizacion",:controller=>"home", :action=> "localizacion") %></li>
+        <li><%= link_to_unless_current("Servicios",:controller=>"home", :action=> "servicios") %></li>
+        <li><%= link_to_unless_current("Quienes Somos",:controller=>"home", :action=> "quienes_somos") %></li>
+        <li><%= link_to_unless_current("Contacto",:controller=>"home", :action=> "contacto") %></li>
+       </ul>
+    </div>
+  </nav>
